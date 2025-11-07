@@ -6,7 +6,7 @@
 <Monster ID="4" ResName="ani019" Name="Nhím Nhím" />
 <Monster ID="5" ResName="ani018" Name="Heo Rừng" />
 <Monster ID="6" ResName="ani052" Name="Linh Miêu" />
-<Monster ID="7" ResName="ani053" Name="Tàng Vực Hầu" />
+///<Monster ID="7" ResName="ani053" Name="Tàng Vực Hầu" />
 <Monster ID="8" ResName="ani054" Name="Khôi Diệp Hầu" />
 <Monster ID="9" ResName="ani055" Name="Hắc Diệp Hầu" />
 <Monster ID="10" ResName="ani056" Name="Kim Tơ Hầu" />
@@ -14,14 +14,30 @@
 <Monster ID="8" ResName="ani010" Name="Sói Nâu" />
 <Monster ID="9" ResName="ani011" Name="Sói Xanh" />
 <Monster ID="10" ResName="ani012" Name="Sói Tuyết" />
+<Monster ID="2" ResName="ani001" Name="Đông Bắc Hổ" />
+<Monster ID="3" ResName="ani002" Name="Hoa Nam Hổ"  />
+<Monster ID="4" ResName="ani003" Name="Bạch Ngọc Hổ" />
+<Monster ID="5" ResName="ani005" Name="Kim Tiền Báo" />   
+<Monster ID="11" ResName="ani013" Name="Hắc Hồ Ly"/>
+<Monster ID="19" ResName="ani029" Name="Trâu Rừng"/>
+
+
+<Monster ID="911" ResName="enemy150" Name="Sương Đao"/>
+<Monster ID="912" ResName="enemy122" Name="Phi Sa (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
+<Monster ID="913" ResName="enemy122" Name="Sương Liêm (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
+<Monster ID="914" ResName="enemy069" Name="Thừa Phong (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
+<Monster ID="915" ResName="enemy205" Name="Thủy Quỷ (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
+<Monster ID="916" ResName="enemy085" Name="Thần Tý (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
+<Monster ID="917" ResName="enemy134" Name="Tranh Hán (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
+<Monster ID="918" ResName="enemy140" Name="Phá Lang"/>
+<Monster ID="919" ResName="enemy137" Name="Ảnh Côn"/>
+<Monster ID="920" ResName="enemy135" Name="Đao Tử"/>
+<Monster ID="921" ResName="enemy129" Name="Lang Bổng"/>
+<Monster ID="922" ResName="enemy136" Name="Hắc Cân (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   
   
-  <Monster ID="2" ResName="ani001" Name="Đông Bắc hổ " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="7" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="3" ResName="ani002" Name="Hoa Nam hổ " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="7" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="4" ResName="ani003" Name="Bạch Hổ " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="7" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="5" ResName="ani005" Name="Kim Tiền báo" Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="6" ResName="ani006" Name="Tuyết Báo" Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="11" ResName="ani013" Name="Hồ ly" Title="" MonsterType="0" Level="35" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="5" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="lv35" />
+  
   <Monster ID="12" ResName="ani015" Name="Hồng Hồ " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   
 
@@ -29,7 +45,6 @@
   <Monster ID="16" ResName="ani024" Name="Voi Hoàng hà " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="5" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="17" ResName="ani025" Name="Gấu nâu" Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="5" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="18" ResName="ani026" Name="Gấu đen" Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="5" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="19" ResName="ani029" Name="Trâu rừng" Title="" MonsterType="0" Level="35" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="lv35" />
   <Monster ID="20" ResName="ani033" Name="Cá sấu" Title="" MonsterType="0" Level="25" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="4" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="lv25" />
   <Monster ID="21" ResName="ani036" Name="Thằn lằn đỏ" Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="4" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="22" ResName="ani037" Name="Nhãn Kính Xà" Title="" MonsterType="0" Level="25" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="4" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="lv25" />
@@ -504,18 +519,6 @@
   <Monster ID="908" ResName="enemy024" Name="Sương Đao cấp 70" Title="" MonsterType="0" Level="1" Treasure="3" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="909" ResName="enemy024" Name="Sương Đao cấp 80" Title="" MonsterType="0" Level="1" Treasure="3" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="910" ResName="enemy024" Name="Sương Đao cấp 90" Title="" MonsterType="0" Level="1" Treasure="3" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="911" ResName="enemy150" Name="Sương Đao (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="912" ResName="enemy122" Name="Phi Sa (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="913" ResName="enemy122" Name="Sương Liêm (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="914" ResName="enemy069" Name="Thừa Phong (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="915" ResName="enemy205" Name="Thủy Quỷ (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="916" ResName="enemy085" Name="Thần Tý (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="917" ResName="enemy134" Name="Tranh Hán (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="918" ResName="enemy140" Name="Phá Lang (khu vực sơ cấp" Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="21" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="919" ResName="enemy137" Name="ảnh côn (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="21" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="920" ResName="enemy135" Name="Đao Tử (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="24" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="921" ResName="enemy129" Name="Lang Bổng (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="24" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
-  <Monster ID="922" ResName="enemy136" Name="Hắc Cân (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="923" ResName="enemy138" Name="Hà Hồn 1 " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="12" AtkSpeed="12" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="924" ResName="enemy146" Name="Hà Hồn 2 " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="12" AtkSpeed="12" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   <Monster ID="925" ResName="boss016" Name="Hà Hồn 3 " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="12" AtkSpeed="12" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
