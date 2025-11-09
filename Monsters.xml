@@ -23,6 +23,12 @@
 
 
 <Monster ID="911" ResName="enemy150" Name="Sương Đao"/>
+<Monster ID="911" ResName="enemy125" Name="Sơn Tặc"/>
+<Monster ID="911" ResName="enemy127" Name="Tật Điện"/>
+<Monster ID="911" ResName="enemy128" Name="Trường Đao"/>
+<Monster ID="921" ResName="enemy129" Name="Lang Bổng"/>
+<Monster ID="921" ResName="enemy130" Name="Trường Thương"/>
+<Monster ID="921" ResName="enemy131" Name="Thanh Mi"/>
 <Monster ID="912" ResName="enemy122" Name="Phi Sa (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
 <Monster ID="913" ResName="enemy122" Name="Sương Liêm (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
 <Monster ID="914" ResName="enemy069" Name="Thừa Phong (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
@@ -32,7 +38,7 @@
 <Monster ID="918" ResName="enemy140" Name="Phá Lang"/>
 <Monster ID="919" ResName="enemy137" Name="Ảnh Côn"/>
 <Monster ID="920" ResName="enemy135" Name="Đao Tử"/>
-<Monster ID="921" ResName="enemy129" Name="Lang Bổng"/>
+
 <Monster ID="922" ResName="enemy136" Name="Hắc Cân (khu vực sơ cấp) " Title="" MonsterType="0" Level="1" Treasure="1" Elemental="0" MaxHP="-1" MoveSpeed="6" AtkSpeed="18" AIID="100000" Camp="65535" Auras="" Skills="" DropProfile="" />
   
   
