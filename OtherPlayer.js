@@ -5,7 +5,6 @@ const playerThreeLetterNames = [
   "Hắc Vân", "Tử Thần", "Phi Đao", "Kiếm Vương", "Đao Cuồng",
   "Thanh Phong", "Huyền Băng", "Liệt Hỏa", "Ám Dạ", "Tinh Vân"
 ];
-const directions = [0,1,2,3,4,5,6,7];
 
 // Tạo 10 người chơi khác
 function spawnOtherPlayers() {
