@@ -182,7 +182,7 @@ function drawMonsters(ctx, camX, camY) {
     const hpRatio = Math.max(0, m.hp / m.maxHp);
     ctx.fillStyle = '#333';
     ctx.fillRect(screenX - 25, screenY - frame.h - 5, 50, 5);
-    ctx.fillStyle = hpRatio > 0.5 ? '#4caf50' : hpRatio > 0.25 ? '#ffeb3b' : 'red';
+    ctx.fillStyle = hpRatio > 0.5 ? '#00CC66' : hpRatio > 0.25 ? '#ffeb3b' : 'red';
     ctx.fillRect(screenX - 25, screenY - frame.h - 5, 50 * hpRatio, 5);
 
     // Draw sprite
