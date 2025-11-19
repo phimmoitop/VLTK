@@ -163,7 +163,7 @@ function drawMonsters(ctx, camX, camY, canvas) {
     const by = nameY + 5;
     ctx.fillStyle = '#555';
     ctx.fillRect(bx, by, barWidth, barHeight);
-    ctx.fillStyle = 'limegreen';
+    ctx.fillStyle = '#00CC66';
     ctx.fillRect(bx, by, barWidth * hpPercent, barHeight);
     
     ctx.drawImage(spriteSheetImage, f.x, f.y, f.w, f.h, sx, sy, f.w, f.h);
