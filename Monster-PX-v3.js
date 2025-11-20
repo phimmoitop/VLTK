@@ -102,12 +102,12 @@ function createRandomMonster() {
     AllMonster.x = 0; 
     AllMonster.y = 0;
     monsterContainer.addChild(AllMonster);
-    MonsterNameText = createNameText(RandomMonsterName, AllMonster.height, 0x66ccff);
+    const MonsterNameText = createNameText(RandomMonsterName, AllMonster.height, 0x66ccff);
     monsterContainer.addChild(MonsterNameText); 
   
     const hpPercent = Math.random() * 0.9 + 0.1; 
-    MonsterHPBar = CreatHPBar(AllMonster.height, 60, 8);
-    monsterContainer.addChild(MonsterHPBar);
+    const MonsterHPBar = CreatHPBar(AllMonster.height, 60, 8);
+    monsterContainer.addChild(MonsterHPBar.container);
     MonsterHPBar.setPercent(hpPercent);
   
     // --- Logic Entity (CẬP NHẬT: Lưu thêm ID và Dir để xử lý đổi hướng) ---
