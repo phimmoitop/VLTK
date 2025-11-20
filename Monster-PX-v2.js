@@ -102,32 +102,14 @@ function createRandomMonster() {
     AllMonster.x = 0; 
     AllMonster.y = 0;
     monsterContainer.addChild(AllMonster);
-    MonsterNameText = createNameText(RandomMonsterName, -AllMonster.height, 0x66ccff);
+    MonsterNameText = createNameText(RandomMonsterName, AllMonster.height, 0x66ccff);
     monsterContainer.addChild(MonsterNameText); 
-
-    const BAR_WIDTH = 60;
-    const BAR_HEIGHT = 8;
-    const BAR_INNER_PADDING = 2;
-    const Y_OFFSET = -AllMonster.height / 2 - 15;
+  
     const hpPercent = Math.random() * 0.9 + 0.1; 
-   
-    const hpBg = new PIXI.Sprite(hpBgTexture);
-    hpBg.width = BAR_WIDTH;
-    hpBg.height = BAR_HEIGHT;
-    hpBg.anchor.set(0.5, 0.5);
-    hpBg.x = 0;
-    hpBg.y = Y_OFFSET + BAR_HEIGHT / 2;
-    monsterContainer.addChild(hpBg); 
-    
-    const hpFill = new PIXI.Sprite(hpFillTexture);
-    const maxFillWidth = BAR_WIDTH - BAR_INNER_PADDING;
-    hpFill.width = maxFillWidth * hpPercent; 
-    hpFill.height = BAR_HEIGHT - BAR_INNER_PADDING;
-    hpFill.anchor.set(0, 0.5); 
-    hpFill.x = -BAR_WIDTH/2 + BAR_INNER_PADDING/2;
-    hpFill.y = Y_OFFSET + BAR_HEIGHT / 2;
-    monsterContainer.addChild(hpFill);
-   
+    MonsterHPBar = CreatHPBar(AllMonster.height, 60, 8);
+    monsterContainer.addChild(MonsterHPBar);
+    MonsterHPBar.setPercent(hpPercent);
+  
     // --- Logic Entity (CẬP NHẬT: Lưu thêm ID và Dir để xử lý đổi hướng) ---
     const monsterEntity = {
         monsterId: id, 
