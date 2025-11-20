@@ -76,7 +76,7 @@ function updateMonsterLogic(delta) {
 
 function createRandomMonster() {
     const id = monsterKeys[Math.floor(Math.random() * monsterKeys.length)];
-    const nameVN = monsterInfo[id];
+    const RandomMonsterName = monsterInfo[id];
     const action = "Walk"; // Mặc định đi bộ luôn để test hướng
     
     // Random hướng ban đầu
@@ -95,33 +95,15 @@ function createRandomMonster() {
     monsterContainer.y = Math.random() * currentMap.height;
 
     const AllMonster = new PIXI.AnimatedSprite(frames);
-    AllMonster.animationSpeed = 0.1;
+    AllMonster.animationSpeed = 0.05;
     AllMonster.loop = true;
     AllMonster.play();
     AllMonster.anchor.set(0.5, 0.5);
     AllMonster.x = 0; 
     AllMonster.y = 0;
     monsterContainer.addChild(AllMonster);
-
-    // Font chữ giữ nguyên Oswald như bạn yêu cầu
-    const nameText = new PIXI.Text(nameVN, {
-        fontFamily: "Oswald",
-        fontSize: 20,
-        fill: 0xffffff,
-        align: "center",
-        resolution: 2,
-        dropShadow: true,
-        dropShadowColor: '#000000',
-        dropShadowBlur: 2,
-        dropShadowAngle: Math.PI / 4,
-        dropShadowDistance: 3,
-        dropShadowAlpha: 0.8
-    });
-    nameText.roundPixels = true;
-    nameText.anchor.set(0.5, 1);
-    nameText.x = 0; 
-    nameText.y = -AllMonster.height / 2 - 20; 
-    monsterContainer.addChild(nameText); 
+    MonsterNameText = createNameText(RandomMonsterName, -AllMonster.height, 0x66ccff);
+    monsterContainer.addChild(MonsterNameText); 
 
     const BAR_WIDTH = 60;
     const BAR_HEIGHT = 8;
