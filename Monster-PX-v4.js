@@ -102,7 +102,7 @@ function createRandomMonster() {
     AllMonster.x = 0; 
     AllMonster.y = 0;
     monsterContainer.addChild(AllMonster);
-    const MonsterNameText = createNameText(RandomMonsterName, AllMonster.height, 0x66ccff);
+    const MonsterNameText = createNameText(RandomMonsterName, AllMonster.height, 0xffffff);
     monsterContainer.addChild(MonsterNameText); 
   
     const hpPercent = Math.random() * 0.9 + 0.1; 
