@@ -8,11 +8,45 @@ const monsterInfo = {
   ani011: "Sói Xanh", ani012: "Sói Tuyết", ani018: "Heo Rừng",
   ani019: "Nhím Xù", ani029: "Trâu Rừng", ani049: "Kim Miêu",
   ani052: "Linh Miêu", ani054: "Lục Diệp Hầu", ani055: "Hắc Diệp Hầu",
-  ani056: "Kim Tơ Hầu", ani061: "Hươu Đốm", ani063: "Heo Nái",
-  enemy129: "Lang Bổng", enemy135: "Đao Tử", enemy137: "Ảnh Côn",
+  ani056: "Kim Tơ Hầu", ani061: "Hươu Đốm", ani063: "Heo Trắng",
+  enemy129: "Lang Bổng", enemy135: "Đao Phủ", enemy137: "Ảnh Côn",
   enemy140: "Phá Lang", enemy150: "Sương Đao",
 };
 const monsterKeys = Object.keys(monsterInfo);
+
+const monsterIndex = {}; 
+function buildMonsterIndex(textures) {
+    for (const key in textures) {
+        const parts = key.split("-");
+        if (parts.length < 4) continue;
+
+        const aniID = parts[0];     // ani001
+        const action = parts[1];    // Attack
+        const dir = parts[2];       // 0
+        const frameNum = Number(parts[3]); // 1
+
+        if (!monsterIndex[aniID]) monsterIndex[aniID] = {};
+        if (!monsterIndex[aniID][action]) monsterIndex[aniID][action] = {};
+        if (!monsterIndex[aniID][action][dir]) monsterIndex[aniID][action][dir] = [];
+
+        monsterIndex[aniID][action][dir].push({
+            frameNum,
+            texture: textures[key]
+        });
+    }
+
+    // Sort frame theo số frame
+    for (const id in monsterIndex) {
+        for (const action in monsterIndex[id]) {
+            for (const dir in monsterIndex[id][action]) {
+                monsterIndex[id][action][dir].sort((a, b) => a.frameNum - b.frameNum);
+                monsterIndex[id][action][dir] = monsterIndex[id][action][dir].map(f => f.texture);
+            }
+        }
+    }
+
+    console.log("Monster Index Built:", monsterIndex);
+}
 
 function updateMonsterLogic(delta) {
     const mapW = currentMap.width;
@@ -95,7 +129,7 @@ function createRandomMonster() {
     monsterContainer.y = Math.random() * currentMap.height;
 
     const AllMonster = new PIXI.AnimatedSprite(frames);
-    AllMonster.animationSpeed = 0.05;
+    AllMonster.animationSpeed = 0.1;
     AllMonster.loop = true;
     AllMonster.play();
     AllMonster.anchor.set(0.5, 0.5);
@@ -129,7 +163,7 @@ function createRandomMonster() {
         monsterEntity.targetX = Math.max(50, Math.min(currentMap.width - 50, monsterEntity.targetX));
         monsterEntity.targetY = Math.max(50, Math.min(currentMap.height - 50, monsterEntity.targetY));
         
-        monsterEntity.speed = 0.5 + Math.random();
+        monsterEntity.speed = 0.4;
     }
    
     AllMonsters.push(monsterEntity);
