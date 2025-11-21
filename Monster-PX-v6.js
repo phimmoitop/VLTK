@@ -169,3 +169,8 @@ function createRandomMonster() {
     AllMonsters.push(monsterEntity);
     objectLayer.addChild(monsterContainer); 
 }
+
+// Hàm lấy frame ảnh (Tách ra để tái sử dụng khi update)
+function getMonsterFrames(id, action, dir) {
+    return monsterIndex[id]?.[action]?.[String(dir)] || [];
+}
