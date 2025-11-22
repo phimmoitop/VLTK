@@ -126,7 +126,7 @@ function createRandomMonster() {
     // --- Tạo Container và các thành phần (Code cũ của bạn giữ nguyên) ---
     const monsterContainer = new PIXI.Container();
     monsterContainer.x = Math.random() * currentMap.width;
-    monsterContainer.y = Math.random() * currentMap.height;
+    monsterContainer.y = ( Math.random() * currentMap.height - AllMonster.height * 0.5 );
 
     const AllMonster = new PIXI.AnimatedSprite(frames);
     AllMonster.animationSpeed = 0.1;
