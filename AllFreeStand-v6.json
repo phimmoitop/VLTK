@@ -1,7 +1,7 @@
 {
  "frames": {
-  "free-stand-101-0-1-1": {"frame":{"x":392,"y":116,"w":13,"h":26,"offsetX":4,"offsetY":34}},
-  "free-stand-101-0-2-1": {"frame":{"x":457,"y":132,"w":8,"h":24,"offsetX":-5,"offsetY":37}},
+  "free-stand-101-0-1-1": {"frame":{"x":392,"y":116,"w":13,"h":26,"offsetX":11,"offsetY":14}},
+  "free-stand-101-0-2-1": {"frame":{"x":457,"y":132,"w":8,"h":24,"offsetX":-9,"offsetY":16}},
   "free-stand-101-0-0-1": {"frame":{"x":92,"y":132,"w":20,"h":66,"offsetX":0,"offsetY":0}},
   "free-stand-101-1-1-1": {"frame":{"x":496,"y":712,"w":10,"h":27,"offsetX":2,"offsetY":32}},
   "free-stand-101-1-2-1": {"frame":{"x":452,"y":335,"w":8,"h":23,"offsetX":-1,"offsetY":41}},
