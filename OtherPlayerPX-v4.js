@@ -20,7 +20,7 @@ const OtherPlayerNames = [
 
 function createOtherPlayer() {
     // 1. Cấu hình cơ bản
-    const equipId = "161"; // Dùng chung ID với nhân vật chính
+    const equipId = Math.random() < 0.5 ? Math.floor(Math.random() * 68) + 101 : Math.floor(Math.random() * 68) + 201;
     const name = OtherPlayerNames[Math.floor(Math.random() * OtherPlayerNames.length)];
     
     // 2. Tạo Container chính
