@@ -152,18 +152,14 @@ function updateOtherPlayers(delta) {
         p.container.zIndex = p.y; // Sắp xếp độ sâu
 
         // --- 3. RENDER LOGIC (Tương tự updatePlayerLogic) ---
-        const displayInfo = getDisplayInfo(p.currentDir);
-        
-        // Lật hình
-        if (p.skin.scale.x !== displayInfo.scaleX) {
-            p.skin.scale.x = displayInfo.scaleX;
-        }
+        p.skin.scale.x = 1;
+		const resDir = p.currentDir;
 
         const animSpeed = (newAction === "free-run") ? 0.18 : 0.15;
 
         // Tính Dynamic Feet Offset (để chân chạm đất chuẩn)
         let dynamicFeetOffset = 33; 
-        const bodyData = getPlayerPartData(newAction, displayInfo.resDir, 0, p.equipId);
+        const bodyData = getPlayerPartData(newAction, resDir, 0, p.equipId);
         if (bodyData && bodyData.length > 0) {
              const bodySprite = p.parts[0];
              const currentIdx = bodySprite.currentFrame % bodyData.length;
@@ -175,7 +171,7 @@ function updateOtherPlayers(delta) {
         // Render 3 phần (Thân, Tay, Tay)
         [0, 1, 2].forEach(partId => {
             const sprite = p.parts[partId];
-            const partData = getPlayerPartData(newAction, displayInfo.resDir, partId, p.equipId);
+            const partData = getPlayerPartData(newAction, resDir, partId, p.equipId);
 
             if (partData && partData.length > 0) {
                 if (stateChanged || !sprite.playing) {
