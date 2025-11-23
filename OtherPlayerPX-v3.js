@@ -43,7 +43,7 @@ function createOtherPlayer() {
 
     // 5. Tính toán chiều cao để đặt Tên & HP (Giống nhân vật chính)
     let realBodyHeight = 66; 
-    const bodyData = getPlayerPartData("free-stand", 0, 0, equipId);
+    const bodyData = getPlayerPartData("FreeStand", 0, 0, equipId);
     if (bodyData && bodyData.length > 0 && bodyData[0].texture) {
         realBodyHeight = bodyData[0].texture.height;
     }
@@ -79,7 +79,7 @@ function createOtherPlayer() {
         
         speed: 3 + Math.random() * 2, // Tốc độ random từ 3-5
         
-        currentAction: "free-stand",
+        currentAction: "FreeStand",
         currentDir: Math.floor(Math.random() * 8),
         
         // AI State
@@ -119,17 +119,17 @@ function updateOtherPlayers(delta) {
         const dy = p.targetY - p.y;
         const distSq = dx * dx + dy * dy;
         
-        let newAction = "free-stand";
+        let newAction = "FreeStand";
         let newDir = p.currentDir;
 
         if (p.isMoving) {
             if (distSq < 10) { // Đã đến nơi
                 p.isMoving = false;
                 p.idleTime = 60 + Math.random() * 120; // Chờ 1-3 giây (giả sử 60fps)
-                newAction = "free-stand";
+                newAction = "FreeStand";
             } else {
                 // Đang di chuyển
-                newAction = "free-run";
+                newAction = "FreeRun";
                 const dist = Math.sqrt(distSq);
                 
                 p.x += (dx / dist) * p.speed * delta;
@@ -138,7 +138,7 @@ function updateOtherPlayers(delta) {
                 newDir = getDirectionIndex(dx, dy);
             }
         } else {
-            newAction = "free-stand";
+            newAction = "FreeStand";
         }
 
         // Cập nhật trạng thái
