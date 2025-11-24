@@ -1,8 +1,8 @@
 {
  "frames": {
   "FreeStand-101-0-0-1": {"frame":{"x":114,"y":132,"w":20,"h":66,"offsetX":0,"offsetY":0}},
-  "FreeStand-101-0-1-1": {"frame":{"x":535,"y":111,"w":13,"h":26,"offsetX":0,"offsetY":0}},
-  "FreeStand-101-0-2-1": {"frame":{"x":478,"y":683,"w":8,"h":24,"offsetX":0,"offsetY":0}},
+  "FreeStand-101-0-1-1": {"frame":{"x":535,"y":111,"w":13,"h":26,"offsetX":11,"offsetY":14}},
+  "FreeStand-101-0-2-1": {"frame":{"x":478,"y":683,"w":8,"h":24,"offsetX":-9,"offsetY":16}},
   "FreeStand-101-1-0-1": {"frame":{"x":43,"y":340,"w":20,"h":67,"offsetX":0,"offsetY":0}},
   "FreeStand-101-1-1-1": {"frame":{"x":528,"y":337,"w":10,"h":27,"offsetX":0,"offsetY":0}},
   "FreeStand-101-1-2-1": {"frame":{"x":560,"y":966,"w":8,"h":23,"offsetX":0,"offsetY":0}},
