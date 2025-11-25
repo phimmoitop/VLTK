@@ -174,25 +174,50 @@ function updateOtherPlayers(delta) {
             const partData = getPlayerPartData(newAction, resDir, partId, p.equipId);
 
             if (partData && partData.length > 0) {
-                if (stateChanged || !sprite.playing) {
-                    sprite.textures = partData.map(d => d.texture);
-                    sprite.animationSpeed = animSpeed;
-                    sprite.play();
-                    sprite.visible = true;
-                }
+        if (stateChanged || !sprite.playing) {
+            sprite.textures = partData.map(d => d.texture);
+            sprite.animationSpeed = animSpeed;
+            sprite.play();
+            sprite.visible = true;
+        }
 
-                const currentFrameIdx = sprite.currentFrame % partData.length;
-                const currentInfo = partData[currentFrameIdx];
+        const currentFrameIdx = sprite.currentFrame % partData.length;
+        const currentInfo = partData[currentFrameIdx];
 
-                if (currentInfo) {
-                    sprite.x = currentInfo.offsetX;
-                    // Logic Y và Z-Index chuẩn như Player chính
-                    sprite.y = -currentInfo.offsetY - dynamicFeetOffset; 
-                    sprite.zIndex = -currentInfo.offsetY;
-                }
-            } else {
-                sprite.visible = false;
+        if (currentInfo) {
+            sprite.x = currentInfo.offsetX;
+            sprite.y = -currentInfo.offsetY - dynamicFeetOffset;
+
+            // ================= LOGIC Z-INDEX GIỐNG MAINPLAYER =================
+            let zIndex = 0;
+
+            if (newDir === 0) {
+                // Hướng 0: Thân (0) đè lên 2 tay (1, 2)
+                if (partId === 0) zIndex = 10;
+                else zIndex = 1;
             }
+            else if (newDir >= 1 && newDir <= 3) {
+                if (partId === 2) zIndex = 1;  // Tay 2 dưới
+                if (partId === 0) zIndex = 5;  // Thân giữa
+                if (partId === 1) zIndex = 10; // Tay 1 trên
+            }
+            else if (newDir === 4) {
+                if (partId === 1) zIndex = 1;  // Tay 1 dưới
+                if (partId === 0) zIndex = 5;  // Thân giữa
+                if (partId === 2) zIndex = 10; // Tay 2 trên
+            }
+            else {
+                if (partId === 1) zIndex = 1;
+                if (partId === 0) zIndex = 5;
+                if (partId === 2) zIndex = 10;
+            }
+
+            sprite.zIndex = zIndex;
+            // ==================================================================
+        }
+    } else {
+        sprite.visible = false;
+    }
         });
     });
 }
