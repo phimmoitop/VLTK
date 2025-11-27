@@ -17,12 +17,16 @@ const OtherPlayerNames = [
     "Diệt Tuyệt Sư Thái", "Kỷ Hiểu Phù", "Dương Bất Hối", "Tiểu Bảo", "Khang Hy",
     "Ngao Bái", "Trần Cận Nam", "Vi Tiểu Bảo", "Song Nhi", "A Kha", "Kiến Ninh", "Hàn Lão Ma", "Nam Cung Uyển", "Tử Linh Tiên Tử", "Mộ Phái Linh", "Mỹ Đỗ Toa", "Tiêu Viêm", "Đường Tam Tạng", "Lệ Phi Vũ", "Tôn Ngộ Không", "Mộc Kiếm Bình"
 ];
+const TenBangHoi = [
+  "Thích","Huyết Ma","Huynh Đệ","Sinh Tử","RockStorm","GALAXY","ThiênĐịaHội",
+  "Thiên Ưng", "Tàn Sát"
+];
 
 function createOtherPlayer() {
     // 1. Cấu hình cơ bản
     const equipId = Math.random() < 0.5 ? Math.floor(Math.random() * 68) + 101 : Math.floor(Math.random() * 68) + 201;
     const name = OtherPlayerNames[Math.floor(Math.random() * OtherPlayerNames.length)];
-    
+    const OtherPlayerBangHoi = TenBangHoi[Math.floor(Math.random() * TenBangHoi.length)];
     // 2. Tạo Container chính
     const container = new PIXI.Container();
     
@@ -49,8 +53,11 @@ function createOtherPlayer() {
     }
 
     // 6. Tạo UI (Tên + HP)
+	const lineSpacing = 25;
 	const nameColors = [0xffffff, 0xFF7F00, 0x00f390, 0xCC33FF, 0xFF0000];
-    const nameText = createNameText(name, realBodyHeight, nameColors[Math.floor(Math.random() * nameColors.length)]);
+	const OtherPlayerNameColor = nameColors[Math.floor(Math.random() * nameColors.length)]
+    const nameText = createNameText(name, realBodyHeight, OtherPlayerNameColor);
+	const OtherPlayerBangHoiText = createNameText(OtherPlayerBangHoi, realBodyHeight + lineSpacing, OtherPlayerNameColor);
     container.addChild(nameText);
 
     const hpBar = CreatHPBar(realBodyHeight, 60, 8);
