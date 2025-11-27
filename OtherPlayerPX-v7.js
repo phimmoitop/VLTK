@@ -58,7 +58,7 @@ function createOtherPlayer() {
 	const OtherPlayerNameColor = nameColors[Math.floor(Math.random() * nameColors.length)]
     const nameText = createNameText(name, realBodyHeight, OtherPlayerNameColor);
 	const OtherPlayerBangHoiText = createNameText(OtherPlayerBangHoi, realBodyHeight + lineSpacing, OtherPlayerNameColor);
-    container.addChild(nameText);
+    container.addChild(nameText); container.addChild(OtherPlayerBangHoiText);
 
     const hpBar = CreatHPBar(realBodyHeight, 60, 8);
     hpBar.setPercent(Math.random() * 0.5 + 0.5); // Máu random từ 50-100%
