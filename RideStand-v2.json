@@ -1012,5 +1012,5 @@
   "RideStand-268-7-1-1": {"frame":{"x":787,"y":492,"w":13,"h":18,"offsetX":0,"offsetY":0}},
   "RideStand-268-7-2-1": {"frame":{"x":697,"y":444,"w":9,"h":20,"offsetX":0,"offsetY":0}}
   },
- "meta": {"image":"AllRideStand.png","scale":1}
+ "meta": {"image":"RideStand.png","scale":1}
 }
