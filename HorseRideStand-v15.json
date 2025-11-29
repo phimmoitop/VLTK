@@ -211,7 +211,7 @@
   "HorseRideStand-93-2-1-6": {"frame":{"x":717,"y":71,"w":46,"h":77,"offsetX":-51,"offsetY":44}},
   "HorseRideStand-93-2-2-6": {"frame":{"x":930,"y":346,"w":46,"h":68,"offsetX":5,"offsetY":35}},
   "HorseRideStand-93-2-1-7": {"frame":{"x":366,"y":397,"w":47,"h":77,"offsetX":-52,"offsetY":44}},
-  "HorseRideStand-93-2-2-7": {"frame":{"x":930,"y":421,"w":47,"h":68,"offsetX":5,"offsetY":35}}
+  "HorseRideStand-93-2-2-7": {"frame":{"x":930,"y":421,"w":47,"h":68,"offsetX":5,"offsetY":35}},
   
   "HorseRideStand-93-3-1-1": {"frame":{"x":160,"y":425,"w":44,"h":85,"offsetX":-41,"offsetY":60}},
   "HorseRideStand-93-3-2-1": {"frame":{"x":902,"y":0,"w":46,"h":71,"offsetX":-3,"offsetY":26}},
