@@ -23,24 +23,39 @@ const TenBangHoi = [
 ];
 
 function createOtherPlayer() {
-    // 1. Cấu hình Random
+    // 1. Cấu hình Random Trang bị & Tên
     const equipId = Math.random() < 0.5 ? Math.floor(Math.random() * 68) + 101 : Math.floor(Math.random() * 68) + 201;
     const name = OtherPlayerNames[Math.floor(Math.random() * OtherPlayerNames.length)];
     const OtherPlayerBangHoi = TenBangHoi[Math.floor(Math.random() * TenBangHoi.length)];
     
-    // Random xem có cưỡi ngựa không (Ví dụ: 30% có ngựa)
-    // Nếu bạn muốn tất cả đi bộ, set hasHorse = false
-    const hasHorse = Math.random() < 0.3; 
-    const horseId = hasHorse ? "92" : ""; 
+    // ============================================================
+    // [LOGIC MỚI] RANDOM TRẠNG THÁI CƯỠI NGỰA & ID NGỰA (91-95)
+    // ============================================================
+    
+    // 1. Random xem có cưỡi ngựa không (50% tỉ lệ)
+    const isRiding = Math.random() < 0.5; 
+    
+    // 2. Nếu cưỡi thì random ID từ 91 -> 95, không thì để rỗng
+    let horseId = "";
+    if (isRiding) {
+        // Math.random() * 5 trả về 0 -> 4.99...
+        // Floor xuống thành 0, 1, 2, 3, 4
+        // Cộng 91 sẽ thành 91, 92, 93, 94, 95
+        const randomHorseNum = Math.floor(Math.random() * 5) + 91;
+        horseId = String(randomHorseNum);
+    }
+    // ============================================================
 
-    // 2. Tạo Container
+    // 2. Tạo Container chính
     const container = new PIXI.Container();
+    
+    // 3. Tạo Container Skin (Chứa cả ngựa và người)
     const skinContainer = new PIXI.Container();
     skinContainer.sortableChildren = true;
     container.addChild(skinContainer);
 
-    // 3. [MỚI] Tạo 3 bộ phận NGỰA (Part 0, 1, 2)
-    // Cần tạo sẵn để dùng chung hàm render, kể cả khi không cưỡi
+    // 4. Tạo 3 bộ phận NGỰA (Part 0, 1, 2)
+    // Luôn tạo sẵn object sprite để hàm render dùng chung, dù isRiding = false
     const horseParts = {};
     [0, 1, 2].forEach(partId => {
         const sprite = new PIXI.AnimatedSprite([PIXI.Texture.EMPTY]);
@@ -50,7 +65,7 @@ function createOtherPlayer() {
         skinContainer.addChild(sprite);
     });
 
-    // 4. Tạo 3 bộ phận NGƯỜI (Part 0, 1, 2)
+    // 5. Tạo 3 bộ phận NGƯỜI (Part 0, 1, 2)
     const parts = {};
     [0, 1, 2].forEach(partId => {
         const sprite = new PIXI.AnimatedSprite([PIXI.Texture.EMPTY]);
@@ -60,13 +75,15 @@ function createOtherPlayer() {
         skinContainer.addChild(sprite);
     });
 
-    // 5. UI (Tên, HP) - Tính chiều cao chuẩn
+    // 6. Tính toán chiều cao (UI)
+    // Lấy chiều cao người để đặt tên cho chuẩn
     let realBodyHeight = 66; 
     const bodyData = getPlayerPartData("FreeStand", 0, 0, equipId);
     if (bodyData && bodyData.length > 0 && bodyData[0].texture) {
         realBodyHeight = bodyData[0].texture.height;
     }
 
+    // 7. Tạo UI (Tên, Bang hội, HP)
 	const lineSpacing = 25;
 	const nameColors = [0xffffff, 0xFF7F00, 0x00f390, 0xCC33FF, 0xFF0000];
 	const OtherPlayerNameColor = nameColors[Math.floor(Math.random() * nameColors.length)]
@@ -76,10 +93,10 @@ function createOtherPlayer() {
     container.addChild(nameText); container.addChild(OtherPlayerBangHoiText);
 
     const hpBar = CreatHPBar(realBodyHeight, 60, 8);
-    hpBar.setPercent(Math.random() * 0.5 + 0.5);
+    hpBar.setPercent(Math.random() * 0.5 + 0.5); // Random máu 50-100%
     container.addChild(hpBar.container);
 
-    // 6. Vị trí Random
+    // 8. Random vị trí ban đầu
     const startX = Math.random() * currentMap.width;
     const startY = Math.random() * currentMap.height;
     container.x = startX;
@@ -87,16 +104,18 @@ function createOtherPlayer() {
 
     objectLayer.addChild(container);
 
-    // 7. Tạo Entity Object (Cấu trúc giống MainPlayer)
+    // 9. Tạo Entity Object (Lưu các thông số đã random)
     const entity = {
         container: container,
         skin: skinContainer,
         parts: parts,
-        horseParts: horseParts, // [Quan trọng]
+        horseParts: horseParts, // Object chứa sprite ngựa
         
         equipId: String(equipId),
-        horseId: String(horseId), // [Quan trọng]
-        isRiding: hasHorse,       // [Quan trọng]
+        
+        // Cập nhật các biến mới random
+        horseId: horseId,       
+        isRiding: isRiding,       
         
         x: startX,
         y: startY,
@@ -105,7 +124,7 @@ function createOtherPlayer() {
         
         speed: 3 + Math.random() * 2,
         
-        currentAction: "FreeStand",
+        currentAction: "FreeStand", // Sẽ tự đổi sang HorseRideStand ở hàm render nếu isRiding=true
         currentDir: Math.floor(Math.random() * 8),
         
         // AI State
